@@ -1,5 +1,5 @@
 const express = require("express");
-const mongojs = require("mongojs");
+const mongoose = require("mongoose");
 const logger = require("morgan");
 
 const app = express();
@@ -14,7 +14,7 @@ app.use(express.static("public"));
 const databaseUrl = "";
 const collections = [""];
 
-const db = mongojs(databaseUrl, collections);
+const db = mongoose(databaseUrl, collections);
 
 db.on("error", error => {
   console.log("Database Error:", error);
