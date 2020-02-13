@@ -24,25 +24,7 @@ app.get("/", (req, res) => {
   res.send(index.html);
 });
 
-//GET WORKOUTS ROUTE:
 
-
-
-//POST WORKOUT ROUTE:
-
-
-//GET ONE WORKOUT ROUTE:
-
-
-//UPDATE WORKOUT ROUTE:
-
-
-
-//DELETE WORKOUT ROUTE:
-
-
-
-//GET STATS PAGE??****ASK ABOUT THIS***
 
 
 // LISTEN ON PORT 3000:
