@@ -1,16 +1,16 @@
-const router = require("express").Router()
-const db = require("../models/workout")
+const router = require("express").Router();
+const path = require("path");
 
-// exercise:
-router.use("/exercise", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/exercise.html"));
-  });
-// stats:
-router.use("/stats", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/stats.html"));
-  });
-// index:
-router.use("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/index.html"));
-  });
-module.exports = router
+router.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/html/index.html"));
+});
+
+router.get("/exercise", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/html/exercise.html"));
+});
+
+router.get("/stats", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/html/stats.html"));
+});
+
+module.exports = router;
